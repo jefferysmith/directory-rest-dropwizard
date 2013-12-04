@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.jefferysmith.directory</groupId>
-  <artifactId>directory-rest-dropwizard</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <groupId>com.jefferysmith.directory-dropwizard</groupId>
+  <artifactId>directory-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>0.1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>directory-api</module>
+    <module>directory-service</module>
+  </modules>
+
+  <properties>
+    <!-- use UTF-8 for everything -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <dropwizard.version>0.6.2</dropwizard.version>
+  </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.yammer.dropwizard</groupId>
       <artifactId>dropwizard-core</artifactId>
-      <version>0.6.2</version>
+      <version>${dropwizard.version}</version>
     </dependency>
   </dependencies>
-    
-  <properties>
-    <!-- use UTF-8 for everything -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
-    
+
   <build>
     <plugins>
       <plugin>
