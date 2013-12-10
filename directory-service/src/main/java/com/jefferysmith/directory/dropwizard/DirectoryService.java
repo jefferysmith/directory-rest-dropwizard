@@ -5,10 +5,10 @@ import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
 import com.yammer.dropwizard.config.Environment;
 
-public class EmployeeService extends Service<ApplicationConfiguration> {
+public class DirectoryService extends Service<ApplicationConfiguration> {
 
     public static void main(String[] args) throws Exception {
-        new EmployeeService().run(args);
+        new DirectoryService().run(args);
     }
 
     @Override
