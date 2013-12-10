@@ -1,3 +1,12 @@
 http:
   port: 8080
   adminPort: 8081
+
+logging:
+  # The default level of all loggers
+  level: INFO
+
+  # Logger-specific levels
+  loggers:
+    # The level for everything under the com.jefferysmith package
+    "com.jefferysmith": DEBUG
